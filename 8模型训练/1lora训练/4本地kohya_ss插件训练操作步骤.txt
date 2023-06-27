@@ -1,0 +1,4 @@
+需要自己额外下载一套软件。
+1下载地址
+https://github.com/bmaltais/kohya_ss
+

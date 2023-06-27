@@ -1,0 +1,49 @@
+
+1程序地址
+https://github.com/Linaqruf/kohya-trainer
+
+
+============================
+五Fast Kohya Trainer NEW
+1点击mount drive
+2general config
+mode：lora
+lowram：×
+output to drive：勾选。
+install xformers：勾选。
+project name：自己写一个名字。
+train data dir：图片素材目录。
+dataset zip url：
+
+3dreambooth config
+默认。
+
+4download pretrained model选择底模性
+填写模型下载地址
+
+5download vae选择vae
+
+6auto captioning自动生成提示词
+use wd tagger：×。
+use blip：×。
+
+7custom tag自定义提示词
+默认。
+
+8lora config
+默认
+unet学习率
+encoder学习率
+
+9optimizer config优化器设置
+默认
+
+10training config训练设置
+max train type：steps。以步数计算训练长度。
+max train type value：图片数量X100。
+save n epochs type value：3。保存几个模型。
+clip skip：2。选2就行了不知道为什么。
+
+11点击运行。steps100%时候完成训练。
+12建议把模型拖到到谷歌云盘中再下载。
+

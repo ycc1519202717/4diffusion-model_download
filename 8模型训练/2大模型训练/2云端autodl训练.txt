@@ -1,0 +1,35 @@
+0aurodl的缺点是
+如果使用github下载其他插件的话会非常慢
+一次成本大概是2rmb。
+
+1镜像加载
+CrazyBoyM/sd_dreambooth_extension_webui/dreambooth-dreamartist-for-webui
+
+2点击jupyter notebook
+管理文件夹
+将stable diffusion webui和dataset两个文件夹，拖入autodl tmp文件夹中。将占用13g容量。
+等一下，刷新。
+tmp文件夹代表了数据盘的容量。
+
+3开始ipynb界面
+3行代码，一行一行运行。
+
+4点击自定义服务。
+打开webui界面。
+
+5打开dreambooth
+creat模型
+并且在左上角选择创建的模型。
+
+6上传数据集到dataset文件夹
+新建一个文件夹，自己命名。
+要选中所有图片拖拽，不要拖拽整个文件夹。
+
+7写参数。
+使用文件名txt作为内容图像提示词：勾选。
+学习率：0.000005。5个零。
+
+8完成训练后下载
+关机后不扣费
+然后可以无卡模式开启
+并且下载

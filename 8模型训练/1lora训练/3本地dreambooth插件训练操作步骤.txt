@@ -1,0 +1,160 @@
+
+下载地址
+https://github.com/d8ahazard/sd_dreambooth_extension
+===================
+一create本质上是把底模型的组件分开来加载，之训练unet
+1name：起名字。
+2512Xmodel：勾选。代表使用512X512的图片。
+3source checkpoint：底模型。
+4extract ema weights：×。
+5unfreeze model：×。解冻模型参数，不勾选。
+6点击create model。
+=====================
+二select
+1选择你创建的model。
+2×。
+3模型信息栏：×。不用管。
+======================
+三settings
+settings-basic
+
+general基础设置
+1use lora：勾选。
+2train imagic only：×。
+
+intervals间隔长度
+1training steps per image（epochs）：100-500。每张图每周期训练步数。数量越高质量越高。
+2pause after n epochs：0。n个周期后停顿。
+3pause between epochs：0。每n个周期停顿一次。
+4amount of time to pause between epochs：0。每次暂停多少秒。
+5save model frequency：20-30。多少个周期保存一次模型的频率。
+6save previes frequency ：20-30。保存预览的周期频率。
+
+batching批量
+1batch siza：1。一批次多少个。
+2gradient accumulation steps：1。梯度积累步数。
+2class batch size：1。分类的一批多少个。
+3set gradients to none when zeroing：勾选。当梯度为0时候，改为nan值。对显存的优化。
+4gradient checkpointing：勾选。对显存的优化。
+
+learing rate学习率
+1learning rate：0.00002。4个零。
+2learning rate scheduler：学习率调度器。不知道什么意思随便选吧。
+3learning rate warmup steps：0。
+
+image processing图片的训练过程
+1max resulution：512。能够接受的最大图片。
+2apply horizontal flip：勾选。水平翻转图片进行训练。
+3optimizer：8bit adamw。优化器。
+4mixed precision：fp16。混合精度。
+5memory attention：随意选吧。
+6cache latents：勾选。
+7train unet：勾选。
+8step ratio of text encoder training：0。
+9offset noise：0。
+10freeze clip normalization layers：×。
+11clip skip：1。
+12weight decay：0.01。
+13pad tokens：勾选。
+14strict tokens：勾选。严格的提示词。
+15shuffule tags：勾选。洗牌。
+16max token length：75。
+
+prior loss先验损失
+1scale prior loss：0.75。
+
+
+======================
+四concepts概念
+
+directories目录
+1dataset directory：训练图片的地址目录。
+2classification dataset direcory：不填。
+
+filewords训练的风格，人物名称
+1instance token：tag_\(class\)。人物_\（类别\）。实例名称。模型的名字。
+2class token：不填。
+
+training prompts训练提示词
+1instance prompt：[filewords]。自动识别图片旁边的提示词文件。
+2class promt：不填。
+3classification image negative prompt：不填。
+
+sample prompts样本提示词
+系统会在固定步数产生样本，让你确定品质。
+1sample image prompt：materpiece，tag_\(class\)。
+模型名字_\(关键词\)。人物_\（类别\）。把上边的复制过来。自己命名的类别。比较通用的。
+2sample negative promt：自己写。通用的反向题词。
+3sample promt template file：样本题词文件。
+
+class image generation分类图片生成
+不使用就改成0-1-10，或者默认就好。
+1class images per instance image：0。
+2classification CFG scale：1。
+3classification steps：10。
+
+sample image generation样本图片生成
+跟文生图配置一样的。
+1number of samples to generate：1。
+2sample seed：1。固定种子方便对比。
+3sample CFG scale：7.5。
+4sample steps：30。
+
+===============================
+五saving
+
+general基础
+1custom model name：模型名字。自己写一个名字。
+2save ema weights to generated models：×。指数平滑移动平均线。
+3use ema weights for inference：×。
+
+checkpoints
+训练的是lora全部不选。
+1×。
+2×。生成大模型的话勾选。
+3×。
+4×。生成大模型的话勾选。
+5×。
+
+lora
+1lora rank：60。
+2lora weight：1。
+3lora text weitht：1。
+4勾选。
+5勾选。
+6勾选。
+
+diffusion weights（training snapshots）
+训练dreambooth用到的，不选。
+1×。
+2×。
+3×。
+===========================
+六
+1点击save settings
+2点击train开始训练
+3模型存放地址models-lora
+==================
+七生成大模型的选项
+selcet界面
+1model：刚创建的模型。
+2lora model：刚生成的模型。
+3点击右边：generate ckpt生成大模型。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

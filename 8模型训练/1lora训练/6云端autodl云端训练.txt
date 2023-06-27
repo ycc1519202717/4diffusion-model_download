@@ -1,0 +1,9 @@
+https://www.bilibili.com/video/BV1EY4y127SX/?spm_id_from=333.337.search-card.all.click&vd_source=861a961f2943d04cc1181c47cbcc2f76
+
+0显卡性价比选择
+rtx4090=29.29
+a5000=22.41
+rtx3090=21.44
+
+1社区镜像
+akegarasu

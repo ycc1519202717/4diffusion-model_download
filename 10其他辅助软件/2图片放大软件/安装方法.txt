@@ -1,0 +1,4 @@
+安装方法：
+1. 安装Topaz A.I. Gigapixel ：TopazGigapixelAI-4.9.3.2-windows-x64-Full-Installer.exe
+2.安装完后，先不要运行程序，关闭应用程序并运行：Topaz ai Gigapixel.reg。
+3.运行：Topaz Labs 汉化补丁(三合一).exe，根据需要选择运行汉化补丁即可。若只需汉化Topaz ai Gigapixel，只勾选第三项“Topaz Gigapixel AI 4.9.3.2 ”即可。

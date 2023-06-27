@@ -1,0 +1,8 @@
+炼丹阁
+https://models.paomiantv.cn/models/
+
+civitai
+https://civitai.com/
+
+huggingface
+https://huggingface.co/
